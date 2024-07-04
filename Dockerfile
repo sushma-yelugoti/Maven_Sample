@@ -11,6 +11,6 @@ RUN chmod +x /usr/local/bin/chromedriver
 # PACKAGE STAGE
 #
 FROM openjdk:11-jre-slim 
-COPY --from=build /usr/src/app/target/Maven-Sample-1.0-jar-with-dependencies.jar /usr/app/demo-0.0.1-SNAPSHOT.jar
+COPY --from=build /usr/src/app/target/Maven_sample-1.0-SNAPSHOT-jar-with-dependencies.jar /usr/app/demo-0.0.1-SNAPSHOT.jar
 EXPOSE 8080  
 CMD ["java","-jar","/usr/app/demo-0.0.1-SNAPSHOT.jar"]
